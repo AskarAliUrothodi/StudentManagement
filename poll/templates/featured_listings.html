@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="{% static 'css/all.css' %}">
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+   <!-- Custom -->
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <!-- Lightbox -->
+   <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+   
+
+  
+ 
+</head>
+<body>
+    <div style="position:sticky;top: -38px;opacity: 90%">
+    <section id="top-bar" class="p-3" style="background-color: white;"   >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <i class="fas fa-phone"></i> +91 1234567890
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-envelope-open"></i> contact@studacademics.com
+            </div>
+            <div class="col-md-4">
+              <div class="social text-right">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="container1" style="width: 100%; height: 90px;; margin: auto;display: flex;align-items: center;background-color: rgb(2, 2, 69);">
+
+        <div style="width: 1014px; height: 40px; background-color: rgb(20, 121, 164); margin: auto; list-style: none;display: flex;align-items: center;gap: 50px;font-size: 15px;color: white;">
+
+            <a href="/new/" style="color: white;"><li style="padding-left: 20px;">HOME</li></a>
+            <li>ABOUT</li>
+            <a href="/featured_listings/" style="color: white;"><li>FEATURED LISTINGS</li></a>
+            <div style="padding-left: 420px;display: flex; gap: 10px;">
+            <a href="/addstudent/" style="display: flex;align-items: center; color: white;"><li class="fas fa-user-plus" style="display: flex;align-items: center;position: relative;left: 5px;"></li></a>
+            <li><a href="/addstudent/" style="color: white;">REGISTER</a></li>
+            <li class="fas fa-sign-in-alt" style="display: flex;align-items: center;position: relative;left: 5px;"></li>
+            <a href="/" style="color: white;"><li>LOGOUT</li></a>
+           </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dashboard1" style="width: 100%;height: 217px;background-color: rgb(20, 121, 164);padding-top: 48.5px;">
+        <!-- background-color: rgb(41, 62, 78) -->
+        <div class="student_dashboard" style="width: 1140px;height: 120px;;margin: auto;list-style: none;color: white;text-align: center;">
+          
+
+            <li class='fas fa-graduation-cap' style="font-size: 50px;padding-top: 21px;">Stud Academics</li>
+            <li >MANAGE YOUR ACADEMICS</li>
+           
+
+        </div>
+
+      </div>
+
+
+       <div class="navbar1" style="width: 1140px; height: 48px;;margin: auto;padding-top: 20px;">
+        
+        <nav style="width: 1100px;height: 48px;background-color: #e5e5e5b2;margin: auto;list-style: none; display: flex;align-items: center;gap: 10px; margin-top: 20px;">
+            <li class="fas fa-home" style="position: relative;left: 8px;"></li>
+            <li>HOME</li>
+            <li>/</li>
+            <li style="opacity: 63%;">Featured Listings</li>
+        
+        </nav>
+    
+       </div>
+
+       <div style="margin: auto;display: flex;align-items: center;margin-top: 75px;"> 
+        <nav style="margin: auto; background-color: rgb(119, 207, 215);padding-bottom: 40px;border: 5px solid rgb(2, 2, 69);border-radius: 50px;width: 90%;">
+          
+            <h2 class="fas" style=" background-color: rgb(20, 121, 164);color: white;;text-align:center;width: 100%;border-top-left-radius: 40px;border-top-right-radius: 40px;border:3px solid rgb(2, 2, 69);">Student List</h2>
+            
+            <p style="padding-left: 20px;font-style: italic;text-align: center;">Here is the Registerd student List :</p>
+            
+            
+            
+            
+          
+            
+            
+            
+
+            <table style="margin: auto;width: 1100px;" >
+                <tr style="border: 3px solid rgb(20, 121, 164);text-align: center;color: #0c2659; ">
+                    <th style="border: 3px solid rgb(20, 121, 164); ">Sl.No</th>
+                    <th style="border: 3px solid rgb(20, 121, 164); ">Name</th>
+                    <th style="border: 3px solid rgb(20, 121, 164);">Admission No </th>
+                    <th style="border: 3px solid rgb(20, 121, 164);">DOB</th>
+                    <th style="border: 3px solid rgb(20, 121, 164);">Address</th>
+                    <th style="border: 3px solid rgb(20, 121, 164);">Phone Number</th>
+                </tr>
+                {%for x in S%}
+                <tr style="list-style: none;text-align: center; ">
+                   <td style="border: 3px solid rgb(20, 121, 164); ;"><a href="updatestudent/{{x.id}}/">{{x.id}}</td>
+                   <td style="border: 3px solid rgb(20, 121, 164); "><a href="updatestudent/{{x.id}}/">{{x.student_name}}</a></td>
+                   <td style="border: 3px solid rgb(20, 121, 164); ;"><a href="updatestudent/{{x.id}}/">{{x.admission_no}}</a></td>
+                   <td style="border: 3px solid rgb(20, 121, 164); "><a href="updatestudent/{{x.id}}/">{{x.dob}}</a></td>
+                   <td style="border: 3px solid rgb(20, 121, 164); "><a href="updatestudent/{{x.id}}/">{{x.address}}</a></td>
+                   <td style="border: 3px solid rgb(20, 121, 164); ;"><a href="updatestudent/{{x.id}}/">{{x.phone}}</a></td>
+                   
+                </tr>
+                {%endfor%}
+            </table>
+
+            
+            
+            
+           
+
+    
+
+       </div>
+
+       
+
+
+       <div class="copy-right" style="width: 100%;height: 70px;background-color: rgb(3, 3, 44);display: flex;align-items: center;margin-top: 40px;">
+
+        <div style="width: 1100px;height: 40px;margin: auto;list-style: none;">
+        <li style="text-align: center;padding-top: 8px;color: white;">Copyright © 2024 Stud Academics </li>
+        </div>
+      
+       </div>

@@ -1,0 +1,130 @@
+
+{% extends 'master.html'%}
+ 
+ {% block content %} 
+
+
+
+ <div style="position:sticky;top: -38px;opacity: 90%">
+  <section id="top-bar" class="p-3" style="background-color: white;"   >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <i class="fas fa-phone"></i> +91 1234567890
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-envelope-open"></i> contact@studacademics.com
+          </div>
+          <div class="col-md-4">
+            <div class="social text-right">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-pinterest"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container1" style="width: 100%; height: 90px;; margin: auto;display: flex;align-items: center;background-color: rgb(2, 2, 69);">
+
+      <div style="width: 1014px; height: 40px; background-color: rgb(20, 121, 164);border-radius: 50px; margin: auto; list-style: none;display: flex;align-items: center;gap: 50px;font-size: 15px;color: white;">
+
+        <div style="padding-left: 772px;display: flex; gap: 10px;">
+          <a href="//" style="display: flex;align-items: center; color: white;"><li class="fas fa-user-plus" style="display: flex;align-items: center;position: relative;left: 5px;"></li></a>
+          <a href="/signup/" style="color: white;"><li>SIGNUP</li></a>
+          <li class="fas fa-sign-in-alt" style="display: flex;align-items: center;position: relative;left: 5px;"></li>
+          <a href="/" style="color: white;"><li>LOGIN</li></a>
+         </div>
+  
+
+      </div>
+
+    </div>
+  </div>
+
+<section class="vh-50" >
+    <div class="container py-5 h-100" style="width: 1100px;">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;height: 612px;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="https://img.freepik.com/free-photo/young-entrepreneur_1098-18139.jpg"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 611px;" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+{% csrf_token %}
+                  <form method="POST" action="/signup/createaccount/" style="position: relative;bottom: 40px;">
+                 
+  
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                      <span class="h1 fw-bold mb-0" style="color: rgb(2, 2, 69);position: relative;top: 10px;">Stud Academics</span>
+                    </div>
+  
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 3px;position: relative;bottom: 5px;color:rgb(20, 121, 164);">Signup into your account</h5>
+
+                    <div data-mdb-input-init class="form-outline mb-3" style="margin-top: -20px;">
+                        <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Enter your name" style="letter-spacing: 3px;font-size: 18px;" />
+                        <label class="form-label" for="form2Example17">Name</label>
+                      </div>
+  
+                    <div data-mdb-input-init class="form-outline mb-3">
+                      <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="Gmail" style="letter-spacing: 3px;font-size: 18px; "/>
+                      <label class="form-label" for="form2Example17">Email address</label>
+                    </div>
+  
+                    <div data-mdb-input-init class="form-outline mb-3">
+                      <input type="password" id="password1" name="password1" class="form-control form-control-lg" placeholder="Enter Password" style="letter-spacing: 3px;font-size: 18px;"/>
+                      <label class="form-label" for="form2Example27">Password</label>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-3">
+                        <input type="password" id="password2" name="password2" class="form-control form-control-lg" placeholder="Re-Enter Password" style="letter-spacing: 3px;font-size: 18px;" />
+                        <label class="form-label" for="form2Example27">Confirm Password</label>
+                      </div>
+  
+                    <div class="pt-1 mb-3" >
+                      <input class="btn btn-dark btn-lg btn-block" type="submit" value="Submit">
+                    </div>
+  
+                    
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;margin-top: -7px;" >Already have an account? <a href="/"
+                        style="color: #393f81;">Login</a></p>
+                    <a href="#!" class="small text-muted"  style="position: relative;bottom: 60px;">Terms of use.</a>
+                    <a href="#!" class="small text-muted"  style="position: relative;bottom: 60px;">Privacy policy</a>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="copy-right" style="width: 100%;height: 70px;background-color: rgb(20, 121, 164);display: flex;align-items: center;margin-top: 10px;">
+
+    <div style="width: 1100px;height: 40px;margin: auto;list-style: none;">
+    <li style="text-align: center;padding-top: 8px;color: white;">Copyright © 2024 Stud Academics </li>
+    </div>
+  
+   </div>
+
+  {% endblock %}

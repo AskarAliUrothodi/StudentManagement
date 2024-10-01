@@ -1,0 +1,22 @@
+
+{% extends 'master.html'%}
+
+{% block content %}
+
+<h6 class="p-2 text-primary">Hellow {{user.username}} , Welcome to Home...!</h6>
+              
+
+<div class="container mt-1">
+<div class="row row-cols-1 row-cols-md-3 g-2 mt-3 mb-3">
+    
+    <img src="https://www.shutterstock.com/image-vector/web-development-coding-cross-platform-260nw-1128653108.jpg" alt="">
+    <img src="https://image.shutterstock.com/image-photo/womans-hand-fern-leaf-man-260nw-2190358695.jpg" alt="">
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmvWZ0Nt6wRFd0W_dSaBGwpPoAarLGRKrXScYTzOdviw&s" alt="" height="285" width="390"  >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHVCdT4Uok61s4MXRGJBLYd-BDUUGZ67F5hcguOAdH3duEKpmP_fEJqpm0yesjDkpq1fA&usqp=CAU" alt="" height="285" width="390">
+    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="" height="285" width="390">
+    {% load static %}
+
+    <img src="{% static 'tree.jpg' %}" alt="">
+
+{% endblock %}

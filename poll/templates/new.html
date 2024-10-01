@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="{% static 'css/all.css' %}">
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+   <!-- Custom -->
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <!-- Lightbox -->
+   <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+   
+
+  
+ 
+</head>
+<body>
+    <div style="position:sticky;top: -38px;opacity: 90%">
+    <section id="top-bar" class="p-3" style="background-color: white;"   >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <i class="fas fa-phone"></i> +91 1234567890
+            </div>
+            <div class="col-md-4">
+              <i class="fas fa-envelope-open"></i> contact@studacademics.com
+            </div>
+            <div class="col-md-4">
+              <div class="social text-right">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="container1" style="width: 100%; height: 90px;; margin: auto;display: flex;align-items: center;background-color: rgb(2, 2, 69);">
+
+        <div style="width: 1014px; height: 40px; background-color: rgb(20, 121, 164); margin: auto; list-style: none;display: flex;align-items: center;gap: 50px;font-size: 15px;color: white;">
+
+            <a href="/new/" style="color: white;"><li style="padding-left: 20px;">HOME</li></a>
+            <li>ABOUT</li>
+            <a href="/featured_listings/" style="color: white;"><li>FEATURED LISTINGS</li></a>
+            <div style="padding-left: 420px;display: flex; gap: 10px;">
+            <a href="/addstudent/" style="display: flex;align-items: center; color: white;"><li class="fas fa-user-plus" style="display: flex;align-items: center;position: relative;left: 5px;"></li></a>
+            <li><a href="/addstudent/" style="color: white;">REGISTER</a></li>
+            <li class="fas fa-sign-in-alt" style="display: flex;align-items: center;position: relative;left: 5px;"></li>
+            <a href="/" style="color: white;"><li>LOGOUT</li></a>
+           </div>
+
+        </div>
+
+      </div>
+    </div>
+
+      <div class="dashboard1" style="width: 100%;height: 217px;background-color: rgb(20, 121, 164);padding-top: 48.5px;">
+        <!-- background-color: rgb(41, 62, 78) -->
+        <div class="student_dashboard" style="width: 1140px;height: 120px;;margin: auto;list-style: none;color: white;text-align: center;">
+          
+
+            <li class='fas fa-graduation-cap' style="font-size: 50px;padding-top: 21px;">Stud Academics</li>
+            <li >MANAGE YOUR ACADEMICS</li>
+           
+
+        </div>
+
+      </div>
+
+<div>
+       <div class="navbar1" style="width: 1140px; height: 48px;;margin: auto;">
+        
+        <nav style="width: 1100px;height: 48px;background-color: #e5e5e5b2;margin: auto;list-style: none; display: flex;align-items: center;gap: 10px; margin-top: 20px;">
+            <li class="fas fa-home" style="position: relative;left: 8px;"></li>
+            <li>HOME</li>
+            <li>/</li>
+            <li style="opacity: 63%;">Dashboard</li>
+        
+        </nav>
+    
+       </div>
+
+       <div style="width: 1140px;height: 86px;;margin: auto;display: flex;align-items: center;margin-top: 50px;"> 
+        <nav style="width: 1100px;height: 75px;;margin: auto;;">
+          
+            <h2 class="fas" style="font-weight: 300;font-style: italic;">Welcome <div class="fas" style="color: rgb(20, 121, 164);font-weight: 600;font-size: 28px;"><div class="fas">@</div>{{user.username}}</div></h2>
+            <p>You have not added any student</p>
+
+        </nav>
+
+       </div>
+
+       <div class="copy-right" style="width: 100%;height: 70px;background-color: rgb(3, 3, 44);display: flex;align-items: center;margin-top: 40px;">
+
+        <div style="width: 1100px;height: 40px;margin: auto;list-style: none;">
+        <li style="text-align: center;padding-top: 8px;color: white;">Copyright © 2024 Stud Academics </li>
+        </div>
+
+       </div>
+
+      
+</body>
+</html>
